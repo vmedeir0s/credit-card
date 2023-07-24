@@ -32,7 +32,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
               maxLength={19}
-              autocomplete="off"
+              autoComplete="off"
             />
           </fieldset>
           <fieldset className="flex flex-col font-semibold w-full">
@@ -47,7 +47,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
               onChange={handleInputChange}
               placeholder="Nome como está no cartão"
               maxLength={22}
-              autocomplete="off"
+              autoComplete="off"
             />
           </fieldset>
           <div className="flex justify-between">
@@ -64,6 +64,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
                 onKeyDown={handleKeyDown}
                 placeholder="mm/aa"
                 maxLength={5}
+                autoComplete="off"
               />
             </fieldset>
             <fieldset className="flex flex-col font-semibold w-5/12">
@@ -78,6 +79,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
                 onChange={handleInputChange}
                 placeholder="***"
                 maxLength={3}
+                autoComplete="off"
               />
             </fieldset>
           </div>
