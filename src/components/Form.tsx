@@ -19,7 +19,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
   return (
     <div className="bg-gray-800 h-[420px] flex flex-col p-7 rounded ring-1 ring-gray-700 w-[700px] max-lg:w-full max-lg:h-full text-gray-200">
       <div className="flex max-lg:flex-col-reverse max-lg:items-center items-center justify-between h-4/5 max-lg:justify-around ">
-        <form onSubmit={handleSubmitForm} className="flex flex-col w-[calc(45%)] max-sm:w-full gap-2" autocomplete="off">
+        <form onSubmit={handleSubmitForm} className="flex flex-col w-[calc(45%)] max-sm:w-full gap-2">
           <fieldset className="flex flex-col font-semibold w-full">
             <label htmlFor="cardNumber">
               Número do cartão
@@ -32,6 +32,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
               onChange={handleInputChange}
               onKeyDown={handleKeyDown}
               maxLength={19}
+              autocomplete="off"
             />
           </fieldset>
           <fieldset className="flex flex-col font-semibold w-full">
@@ -46,6 +47,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
               onChange={handleInputChange}
               placeholder="Nome como está no cartão"
               maxLength={22}
+              autocomplete="off"
             />
           </fieldset>
           <div className="flex justify-between">
