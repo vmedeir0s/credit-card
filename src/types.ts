@@ -10,4 +10,10 @@ export type FormProps = {
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
   handleSubmitForm: (event: React.FormEvent<HTMLFormElement>) => void;
   isFormValid: boolean;
+  handleKeyDown: (event: React.KeyboardEvent<HTMLInputElement>) => void;
+}
+
+export type CardType = {
+  data: CreditCardData;
+  getBandeiraLogo: (data: CreditCardData) => string;
 }
