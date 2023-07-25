@@ -22,5 +22,5 @@ O objetivo deste projeto é criar um formulário de preenchimento de cartão de 
 Acessar: [Clique Aqui](https://vmedeiros-credit-card.vercel.app/)
 
 <div style="display: inline_block" align="center">
-  <img src="./mobile_demo.png" />
+  <img src="./mobile_demo.png" height="500"/>
 <div>
