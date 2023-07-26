@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import './App.css'
 import Form from "./components/Form"
 import { CreditCardData } from "./types"
+import Swal from 'sweetalert2'
 
 function App() {
   const [data, setData] = useState<CreditCardData>({
@@ -40,13 +41,13 @@ function App() {
     }
   }
 
-  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setData({
-      name: "",
-      cardNumber: "",
-      date: "",
-      code: ""
+  function handleSubmit() {
+    console.log("aconteceu")
+    Swal.fire({
+      title: "Dados salvos com sucesso!",
+      icon: 'success',
+      timer: 1500,
+      showConfirmButton: false
     })
   }
 
@@ -62,8 +63,7 @@ function App() {
 
   const isFormValid = validateForm();
   return (
-
-    <main className="bg-gray-900 h-[calc(100dvh)] flex items-center justify-center">
+    <main className="bg-gray-900 h-[calc(100dvh)] flex flex-col items-center justify-center max-sm:bg-gray-800 gap-1">
       <Form
         data={data}
         handleSubmitForm={handleSubmit}
@@ -71,6 +71,9 @@ function App() {
         isFormValid={isFormValid}
         handleKeyDown={handleKeyDown}
       />
+      <footer>
+        <a href="https://www.linkedin.com/in/vmedeiros/" target="_blank" rel="noopener noreferrer"><p className="text-zinc-500 hover:text-zinc-400">Desenvolvido por Vinicius de Medeiros</p></a>
+      </footer>
     </main>
   )
 }
