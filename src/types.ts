@@ -8,7 +8,7 @@ export type CreditCardData = {
 export type FormProps = {
   data: CreditCardData;
   handleInputChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  handleSubmitForm: (event: React.FormEvent<HTMLFormElement>) => void;
+  handleSubmitForm: () => void;
   isFormValid: boolean;
   handleKeyDown: (event: React.KeyboardEvent<HTMLInputElement>) => void;
 }

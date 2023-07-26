@@ -19,7 +19,7 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
   return (
     <div className="bg-gray-800 h-[420px] flex flex-col p-7 rounded ring-1 ring-gray-700 w-[700px] max-lg:w-full max-lg:h-full text-gray-200">
       <div className="flex max-lg:flex-col-reverse max-lg:items-center items-center justify-between h-4/5 max-lg:justify-around ">
-        <form onSubmit={handleSubmitForm} className="flex flex-col w-[calc(45%)] max-sm:w-full gap-2">
+        <form className="flex flex-col w-[calc(45%)] max-sm:w-full gap-2">
           <fieldset className="flex flex-col font-semibold w-full">
             <label htmlFor="cardNumber">
               Número do cartão
@@ -86,7 +86,13 @@ function Form({ handleInputChange, data, handleSubmitForm, isFormValid, handleKe
         </form>
         <Card getBandeiraLogo={getBandeiraLogo} data={data} />
       </div>
-      <button className="py-4 bg-purple-600 rounded shadow text-white font-semibold disabled:opacity-50 enabled:hover:bg-purple-500" disabled={!isFormValid}>Adicionar Cartão</button>
+      <button
+        className="py-4 bg-purple-600 rounded shadow text-white font-semibold disabled:opacity-50 enabled:hover:bg-purple-500"
+        disabled={!isFormValid}
+        onClick={handleSubmitForm}
+      >
+        Adicionar Cartão
+      </button>
     </div>
   )
 }
